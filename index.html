@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?230849083f985ecbd46667e1e761d13e";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+<head>
+  <meta charset="UTF-8">
+  <title>券都有</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="吃喝玩乐，券都有">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//fastly.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '券都有',
+      repo: '',
+      search: 'auto', // default
+      beian: {
+        ICP: "蜀ICP备2024055679号-1",
+        NISMSP: {
+            number: "",
+            url: "",
+            id: ""
+        },
+    },
+    autoFooter: {
+
+      // the name you wish to display as the copyright holder
+      name:"成都一一三科技有限公司",
+  
+      // the URL (personal or company) which clicking the `name` goes to
+      url:"https://fahuo.quandouyou.fun/docs/",
+  
+      // the start year of copyright
+      copyYear:"2020",
+  
+      // show the privacy policy link
+      policy:false,
+  
+      // show the terms of service link
+      terms:false,
+  
+      // show the cookies policy link
+      cookies:false,
+  
+      // use your own css styles or the built in ones
+      customStyle:false
+    },
+    copyCode: {
+      buttonText: 'Copy to clipboard',
+      errorText: 'Error',
+      successText: 'Copied',
+    },
+    vueGlobalOptions: {
+      data() {
+        return {
+          count: "未知",
+        };
+      },
+      mounted() {
+        this.getUa()
+      },
+      methods:{
+        getUa(){
+          console.log(navigator.userAgent);
+    var os = function (){
+      var ua = navigator.userAgent,
+      isWindowsPhone = /(?:Windows Phone)/.test(ua),
+      isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+      isAndroid = /(?:Android)/.test(ua),
+      isFireFox = /(?:Firefox)/.test(ua),
+      isChrome = /(?:Chrome|CriOS)/.test(ua),
+      isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+      isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+      isPc = !isPhone && !isAndroid && !isSymbian;
+      return {
+          isTablet: isTablet,
+          isPhone: isPhone,
+          isAndroid: isAndroid,
+          isPc: isPc
+      };
+  }();
+  
+  if (os.isAndroid || os.isPhone) {
+    console.log("手机")
+    this.count="手机"
+  } else if (os.isTablet) {
+    this.count="平板"
+  } else if(os.isPc) {
+    this.count="电脑"
+  }
+
+        }
+      }
+      
+    },
+    // complete configuration parameters
+    search: {
+      maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      noData: '找不到结果',//搜索不到结果时显示
+      paths: 'auto',//自动
+      placeholder: '搜索',//搜索框提示
+  },
+      loadSidebar:true,
+      auto2top:true,
+      coverpage:true,
+      
+      maxLevel: 3,
+      subMaxLevel: 3,
+      
+      alias: {
+        '/.*/_navbar.md': '/_navbar.md',
+        '/.*/_sidebar.md': '/_sidebar.md',
+    }
+    }
+  </script>
+
+  <!-- Docsify v4 -->
+  <script src="//fastly.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script src="//fastly.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//fastly.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/docsify-beian@latest/dist/beian.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/@markbattistella/docsify-sidebarfooter@latest"></script>
+  <script src="https://fastly.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script>
+    
+</body>
+</html>
